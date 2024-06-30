@@ -18,7 +18,7 @@ function HomePage() {
   const componentRef = useRef();
   // cargar los datos 
   useEffect(() => {
-    axios.get('http://localhost:5000/user/home', headers).then(res => setData(res.data)).catch(error => setState(error))
+    axios.get('https://mes-app-1d1333e2d2a7.herokuapp.com/user/home', headers).then(res => setData(res.data)).catch(error => setState(error))
   })
   // para updatear comprado del mes segun input 
   const clickHandler = function (producto) {
@@ -27,12 +27,12 @@ function HomePage() {
     const dataToPost = {
       comprado: obj[prod]
     }
-    axios.post(`http://localhost:5000/user/home/${prod}`, dataToPost, headers).then(res => setState(res.data)).catch(error => setState(`Error , ${error}`))
+    axios.post(`https://mes-app-1d1333e2d2a7.herokuapp.com/user/home/${prod}`, dataToPost, headers).then(res => setState(res.data)).catch(error => setState(`Error , ${error}`))
   }
   // to reset comprado del mes
   const empezarMes = function () {
 
-    axios.post('http://localhost:5000/user/home/update/reset', null, headers).then(res => setState(res.data)).catch(error => setState(`Error , ${error}`))
+    axios.post('https://mes-app-1d1333e2d2a7.herokuapp.com/user/home/update/reset', null, headers).then(res => setState(res.data)).catch(error => setState(`Error , ${error}`))
   }
   // hook para imprimir
   const handlePrint = useReactToPrint({
