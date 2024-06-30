@@ -1,0 +1,41 @@
+body {
+  background-color: burlywood;
+}
+
+h1 {
+  text-align: center;
+}
+
+.productos {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 2rem;
+  padding-left: 5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+button {
+  font-weight: 500;
+  padding: 0.4em 0.2em;
+  transition: all 0.3s;
+  border-radius: 5px;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: aqua;
+
+}
+
+.input-cantidad {
+  width: 4rem;
+  padding: 0.2rem;
+  border-radius: 5px;
+}
+
+.state {
+  text-align: center;
+  font-weight: 500;
+}
