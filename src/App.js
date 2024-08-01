@@ -9,9 +9,11 @@ function App() {
   return (
     <Router>
       <Routes>
+        {/* private Route */}
         <Route element={<PrivateRoute />}>
           <Route path="/user/home" element={<HomePage />}></Route>
         </Route>
+        {/* public Route */}
         <Route path="/" element={<WelcomePage />}></Route>
       </Routes>
 
